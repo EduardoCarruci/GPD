@@ -4,7 +4,7 @@ import 'package:gpd2/src/pages/login_page.dart';
 import 'package:gpd2/src/pages/splash_page.dart';
 
 void main() => runApp(MyApp());
-// generar cambios
+// generar cambios nuevos cambios 
 class MyApp extends StatelessWidget {
   
   @override
