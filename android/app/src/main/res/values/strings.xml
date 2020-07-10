@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+   <string name="app_name">gpd</string>  
+   <string name="facebook_app_id">664359194117853</string> 
+   <string name="fb_login_protocol_scheme">fb664359194117853</string>
+</resources>

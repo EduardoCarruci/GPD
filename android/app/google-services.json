@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "624303256271",
+    "firebase_url": "https://gpdbase-b7792.firebaseio.com",
+    "project_id": "gpdbase-b7792",
+    "storage_bucket": "gpdbase-b7792.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624303256271:android:d8db56dcea41fe32c43dba",
+        "android_client_info": {
+          "package_name": "com.example.gpd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "624303256271-ta17trs316doh7oefbhjaktj5p160oe8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gpd",
+            "certificate_hash": "548c0064be10a5d650b66bf88088b28e117fb75c"
+          }
+        },
+        {
+          "client_id": "624303256271-cnm42d62imnq47uq4sv6cs5nmp91br0g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzFEyxG2Tn8iTAweVwoC-KzS00i5AqE8s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "624303256271-cnm42d62imnq47uq4sv6cs5nmp91br0g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
