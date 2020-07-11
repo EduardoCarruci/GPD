@@ -5,6 +5,7 @@ import 'package:gpd2/src/pages/splash_page.dart';
 
 void main() => runApp(MyApp());
 // generar cambios nuevos cambios intento diosito 
+//agregandome
 class MyApp extends StatelessWidget {
   
   @override
