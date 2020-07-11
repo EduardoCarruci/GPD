@@ -2,7 +2,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:gpd2/src/libs/auth.dart';
-// import 'package:gpd2/src/libs/auth.dart';
 import 'package:gpd2/src/pages/home_page.dart';
 import 'package:gpd2/src/utils/app_colors.dart';
 import 'package:gpd2/src/utils/extras.dart';
@@ -92,14 +91,14 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
                       children: <Widget>[
                         FlatButton(
                           onPressed: widget.onGoToLogin, 
-                          child: Text('<-Regresar')
+                          child: Text('<-Regresar',style: TextStyle(fontSize: 15,color:Colors.blueAccent))
                           ),
 
                        RounderdButton(
                        label: 'Enviar',
                        onPressed: this._submit, 
                        ),
-                       
+
                       ],
                     ),             
                      
