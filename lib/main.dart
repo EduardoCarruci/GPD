@@ -7,7 +7,7 @@ import 'package:gpd2/src/pages/splash_page.dart';
 import 'src/libs/preferencias_usuario/preferencias_usuario.dart';
 
 
-  //COMENTARIO
+  //COMENTARIO PARA TRAER DATOS
 
 
 
