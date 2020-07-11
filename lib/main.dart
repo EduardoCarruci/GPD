@@ -4,8 +4,12 @@ import 'package:gpd2/src/pages/home_page.dart';
 import 'package:gpd2/src/pages/login_page.dart';
 import 'package:gpd2/src/pages/settings_page.dart';
 import 'package:gpd2/src/pages/splash_page.dart';
-
 import 'src/libs/preferencias_usuario/preferencias_usuario.dart';
+
+
+  //COMENTARIO
+
+
 
 void main() async {
 WidgetsFlutterBinding.ensureInitialized();
