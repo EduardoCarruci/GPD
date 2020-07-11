@@ -11,7 +11,7 @@ import 'package:gpd2/src/widgets/pagina3.dart';
 import 'package:gpd2/src/widgets/pagina_principal.dart';
 import 'package:gpd2/src/widgets/welcome.dart';
 
-//para el usuario
+//para el usuario holaa holas
 class LoginFormType{
   static final int login = 0;
   static final int register = 1;
