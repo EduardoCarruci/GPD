@@ -28,7 +28,7 @@ class RounderdButton extends StatelessWidget {
             fontSize: 15
           ),
           ),
-          padding: EdgeInsets.symmetric(horizontal:55, vertical:10),
+          padding: EdgeInsets.symmetric(horizontal:50, vertical:12),
           decoration: BoxDecoration(
             color:this.backgroundColor ?? AppColors.primary, 
             boxShadow: [

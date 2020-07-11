@@ -99,12 +99,20 @@ class _LoginformState extends State<Loginform> {
                    Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
-                      FlatButton(
+                      FlatButton.icon(
+                        icon: Icon(
+                            FontAwesomeIcons.angleLeft,
+                            color: Colors.blue,
+                          ),
+                          label: Text(
+                            "Cancelar",
+                            style: TextStyle(color: Colors.blue),
+                          ),
                       onPressed: (){
                         Navigator.pushReplacementNamed(context, HomePrin.routeName);
-                      },
-                      child: Text("←Cancelar",style: TextStyle(fontSize: 15,color:Colors.blueAccent)),
+                      },                      
                     ),
+                    
                       RounderdButton(
                        label: 'Iniciar',
                        onPressed: this._submit, 
@@ -143,10 +151,10 @@ class _LoginformState extends State<Loginform> {
                         RaisedButton.icon(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(2.0)),
-                          color: Colors.indigo,
+                          color: Color(0xff44BAFF),
                           icon: Icon(
                             FontAwesomeIcons.facebook,
-                            color: Color(0xff44BAFF),
+                            color: Colors.white,
                           ),
                           label: Text(
                             "Facebook",

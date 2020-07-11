@@ -90,7 +90,7 @@ class _LoginPageState extends State<LoginPage> with AfterLayoutMixin {
                                _switchForm(LoginFormType.forgotPassword);
                              },
                              ),
-                             Registerform(
+                             RegisterForm(
                                onGoToLogin: (){
                                  _switchForm(LoginFormType.login);
                                },

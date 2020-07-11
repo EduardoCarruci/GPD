@@ -1,9 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-// import 'package:gpd2/src/libs/auth.dart';
+import 'package:gpd2/src/libs/auth.dart';
 import 'package:gpd2/src/pages/home_page.dart';
 import 'package:gpd2/src/utils/app_colors.dart';
+import 'package:gpd2/src/utils/extras.dart';
 import 'package:gpd2/src/utils/responsive.dart';
 import 'package:gpd2/src/widgets/input_text_login.dart';
 import 'package:gpd2/src/widgets/rounderd_button.dart';
@@ -18,7 +19,9 @@ class ForgotPasswordForm extends StatefulWidget {
 }
 
 class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
-  bool _agree = false;
+  bool _sent = false;
+
+  final GlobalKey<InputTextLoginState> _emailKey = GlobalKey();
 
   void _goTo(BuildContext context, FirebaseUser user){
    if (user != null){
@@ -26,6 +29,19 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
    }else{
      print('login failed');
    }
+  }
+
+  Future<void> _submit() async{
+    final String email = _emailKey.currentState.value; 
+    final bool emailOk = _emailKey.currentState.isOK;
+
+    if(emailOk ) {
+     final bool isOk = 
+     await Auth.instance.sendResetEmailLink(context, email: email);
+     setState(() {
+       _sent = isOk;
+     });
+    }
   }
 
   @override
@@ -59,10 +75,15 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
                  ),
                  ),
                  SizedBox(height: responsive.ip(5),),
+
+                 _sent?Text("Se envió el correo electrónico para restablecer su contraseña."):
                  InputTextLogin(
+                   key: _emailKey,
                    iconpath: 'assets/icon/email.svg', 
                    placeholder: 'Email',
+                   validator: (text) => Extras.isValidEmail(text),
                    ),
+
                   SizedBox(height: responsive.ip(3),),
                    
                     Row(
@@ -70,12 +91,14 @@ class _ForgotPasswordFormState extends State<ForgotPasswordForm> {
                       children: <Widget>[
                         FlatButton(
                           onPressed: widget.onGoToLogin, 
-                          child: Text('<-Regresar')
+                          child: Text('<-Regresar',style: TextStyle(fontSize: 15,color:Colors.blueAccent))
                           ),
+
                        RounderdButton(
                        label: 'Enviar',
-                       onPressed: (){}, 
+                       onPressed: this._submit, 
                        ),
+
                       ],
                     ),             
                      
