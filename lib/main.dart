@@ -9,13 +9,13 @@ void main() => runApp(MyApp());
 //prueba 12
 class MyApp extends StatelessWidget {
   
-
+  
 
   
 
 
 
-
+  //
   //RECIBIR
   @override
   Widget build(BuildContext context) {
