@@ -40,7 +40,7 @@ class Welcome extends StatelessWidget {
                      top:0,
                      left: 0,
                      right: 0,
-                     child: SvgPicture.asset('assets/img/clouds1.svg',
+                     child: SvgPicture.asset('assets/img/nuves.svg',
                      width: contraints.maxWidth,
                      height: contraints.maxHeight*0.68,
                      )),
