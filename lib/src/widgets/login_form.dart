@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:gpd2/src/libs/auth.dart';
+import 'package:gpd2/src/pages/home.dart';
 import 'package:gpd2/src/pages/home_page.dart';
 import 'package:gpd2/src/utils/extras.dart';
 import 'package:gpd2/src/utils/responsive.dart';
@@ -92,13 +93,25 @@ class _LoginformState extends State<Loginform> {
                        ),
                        ), 
                      onPressed: widget.onGoToForgotPassword,
-                     //set
                      ),
                    ),
-                     RounderdButton(
+                   Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      FlatButton(
+                      onPressed: (){
+                        Navigator.pushReplacementNamed(context, HomePrin.routeName);
+                      },
+                      child: Text("←Cancelar",style: TextStyle(fontSize: 15,color:Colors.blueAccent)),
+                    ),
+                      RounderdButton(
                        label: 'Iniciar',
                        onPressed: this._submit, 
                        ),
+                       
+                    ],
+                   ),
+                     
 
                   SizedBox(height:responsive.ip(2)),
 

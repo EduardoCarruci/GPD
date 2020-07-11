@@ -196,7 +196,7 @@ class _RegisterFormState extends State<RegisterForm> {
                   children: <Widget>[
                     FlatButton(
                       onPressed: widget.onGoToLogin,
-                      child: Text("←Regresar"),
+                      child: Text("←Regresar",style: TextStyle(fontSize: 15,color:Colors.blueAccent)),
                     ),
                     SizedBox(width:10),
                     RounderdButton(
