@@ -17,7 +17,7 @@ WidgetsFlutterBinding.ensureInitialized();
     await prefs.initPrefs();
   runApp(MyApp());
 }
-//add
+
 class MyApp extends StatelessWidget {
   
   @override

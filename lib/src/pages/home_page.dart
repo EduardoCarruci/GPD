@@ -44,7 +44,6 @@ class _HomepageState extends State<Homepage> {
           child: FutureBuilder<FirebaseUser>(
             future: Auth.instance.user,
             builder: (BuildContext _,AsyncSnapshot<FirebaseUser> snapshot){
-
             if(snapshot.hasData){
               // para saber todos los datos del usuario.
               final user = snapshot.data;
@@ -53,6 +52,8 @@ class _HomepageState extends State<Homepage> {
               user.metadata.creationTime;
               user.metadata.lastSignInTime;
               
+              
+
               return ListView(
                 children: <Widget>[
                   SizedBox(height:10),
@@ -68,7 +69,7 @@ class _HomepageState extends State<Homepage> {
                       ),
                     )
                     :_getAlias(user.displayName),
-
+                    
                   ),
                   SizedBox(height:10),
                   Text(user.displayName, 
@@ -85,11 +86,9 @@ class _HomepageState extends State<Homepage> {
                     fontWeight:FontWeight.w300,
                   ),
                   ),
-
-                 
                   SizedBox(height:20),
                   CupertinoButton(
-                    child: Text("Cerrar sesión"), 
+                    child: Text("Log out"), 
                     onPressed: (){
                       Auth.instance.logDut(context);
                     }

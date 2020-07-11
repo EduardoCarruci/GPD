@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gpd2/src/libs/auth.dart';
 import 'package:gpd2/src/pages/home.dart';
 import 'package:gpd2/src/pages/home_page.dart';
@@ -98,12 +99,20 @@ class _LoginformState extends State<Loginform> {
                    Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
-                      FlatButton(
+                      FlatButton.icon(
+                        icon: Icon(
+                            FontAwesomeIcons.angleLeft,
+                            color: Colors.blue,
+                          ),
+                          label: Text(
+                            "Cancelar",
+                            style: TextStyle(color: Colors.blue),
+                          ),
                       onPressed: (){
                         Navigator.pushReplacementNamed(context, HomePrin.routeName);
-                      },
-                      child: Text("←Cancelar",style: TextStyle(fontSize: 15,color:Colors.blueAccent)),
+                      },                      
                     ),
+                    
                       RounderdButton(
                        label: 'Iniciar',
                        onPressed: this._submit, 
@@ -118,31 +127,47 @@ class _LoginformState extends State<Loginform> {
                 Text('Registrate con:'),
                 SizedBox(height:responsive.ip(0.7)),
 
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    RedesBotton(
-                      size: 55,
-                      iconPath: 'assets/icon/face.svg',
-                      backgroudColor: Color(0xff44BAFF),
-                      onPressed: () async{
-                       final user = await Auth.instance.facebook(context);
-                        _goTo(user);
-                      },
-                      
-                    ),
-                    SizedBox(width:20),
-                    RedesBotton(
-                      size: 55,
-                      iconPath: 'assets/icon/google.svg',
-                      backgroudColor: Color(0xffE53935),
-                      onPressed: () async{
+                 Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        RaisedButton.icon(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(2.0)),
+                          color: Colors.red,
+                          icon: Icon(
+                            FontAwesomeIcons.google,
+                            color: Colors.white,
+                          ),
+                          label: Text(
+                            "Google",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          onPressed: () async{
                       final user = await Auth.instance.google(context);
                        _goTo(user);
                       },
+                        ),
+                        SizedBox(width: 10.0),
+                        RaisedButton.icon(
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(2.0)),
+                          color: Color(0xff44BAFF),
+                          icon: Icon(
+                            FontAwesomeIcons.facebook,
+                            color: Colors.white,
+                          ),
+                          label: Text(
+                            "Facebook",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                          onPressed: () async{
+                       final user = await Auth.instance.facebook(context);
+                        _goTo(user);
+                      },
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+
                 SizedBox(height:responsive.ip(2.7)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
