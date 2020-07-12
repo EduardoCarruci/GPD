@@ -66,8 +66,10 @@ class _HomePrinState extends State<HomePrin> with AfterLayoutMixin {
 
     return Scaffold(
        appBar: AppBar(
-        title: Text('Guia Profecional Doninicana',style: TextStyle( color: Colors.black54 )),
-        backgroundColor: (prefs.colorSecundario) ? Colors.white70 : Colors.blue,
+        
+        elevation: 0,
+        title: Text('Guia Profecional Doninicana',style: TextStyle( color: Colors.black )),
+        backgroundColor: (prefs.colorSecundario) ? Colors.blue : Colors.transparent,
        ),
       drawer: MenuWidget(),
       body: GestureDetector(

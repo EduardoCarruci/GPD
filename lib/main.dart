@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gpd2/src/pages/home.dart';
 import 'package:gpd2/src/pages/home_page.dart';
 import 'package:gpd2/src/pages/login_page.dart';
+import 'package:gpd2/src/pages/perfil.dart';
 import 'package:gpd2/src/pages/settings_page.dart';
 import 'package:gpd2/src/pages/splash_page.dart';
 import 'src/libs/preferencias_usuario/preferencias_usuario.dart';
@@ -34,13 +35,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'sans'
       ),
-      home: HomePrin(),
+      home: Perfil(),
       routes: {
         HomePrin.routeName: (_) => HomePrin(),
         Homepage.routeName: (_) => Homepage(),
         SplashPage.routeName: (_) => SplashPage(),
         LoginPage.routeName: (_) => LoginPage(),
         SettingsPage.routeName: (_) => SettingsPage(),
+        Perfil.routeName: (_) => Perfil(),
       },
     );
   }

@@ -38,9 +38,9 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        
+        elevation: 0,
         title: Text('Ajustes',style: TextStyle( color: Colors.black54 )),
-        backgroundColor: (prefs.colorSecundario) ? Colors.white70 : Colors.blue,
+        backgroundColor: (prefs.colorSecundario) ? Colors.blue : Colors.transparent,
       
       ),
       drawer: MenuWidget(),
