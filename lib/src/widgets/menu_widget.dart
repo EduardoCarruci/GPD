@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gpd2/src/pages/home.dart';
 import 'package:gpd2/src/pages/login_page.dart';
+import 'package:gpd2/src/pages/perfil.dart';
 import 'package:gpd2/src/pages/settings_page.dart';
 
 
@@ -24,7 +25,6 @@ class MenuWidget extends StatelessWidget {
              )
          ),
          ),
-
          ListTile(
            leading: Icon(Icons.home, color: Colors.blue),
            title: Text('Inicio'),
@@ -34,6 +34,11 @@ class MenuWidget extends StatelessWidget {
            leading: Icon(Icons.account_circle, color: Colors.blue),
            title: Text('Accede a tu perfil'),
            onTap: ()=> Navigator.pushReplacementNamed(context, LoginPage.routeName),
+         ),
+          ListTile(
+           leading: Icon(Icons.folder_shared, color: Colors.blue),
+           title: Text('Perfil'),
+           onTap: ()=> Navigator.pushReplacementNamed(context, Perfil.routeName),
          ),
           ListTile(
            leading: Icon(Icons.contact_phone, color: Colors.blue),

@@ -86,6 +86,13 @@ class _HomepageState extends State<Homepage> {
                     fontWeight:FontWeight.w300,
                   ),
                   ),
+                  Text(user.phoneNumber, 
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize:15,
+                    fontWeight:FontWeight.w300,
+                  ),
+                  ),
                   SizedBox(height:20),
                   CupertinoButton(
                     child: Text("Log out"), 
@@ -104,7 +111,8 @@ class _HomepageState extends State<Homepage> {
             return Center(
               child: CupertinoActivityIndicator(),
               );
-          }),
+          }
+          ),
           ),
       ),
     );

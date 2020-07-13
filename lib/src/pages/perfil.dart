@@ -18,8 +18,8 @@ class Perfil extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: Icon(
-              FontAwesomeIcons.commentDots,
-              color: Colors.black54,
+              Icons.arrow_back,
+              color: Colors.red,
             ),
             onPressed: () {},
           ),

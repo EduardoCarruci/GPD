@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         fontFamily: 'sans'
       ),
-      home: Perfil(),
+      home: HomePrin(),
       routes: {
         HomePrin.routeName: (_) => HomePrin(),
         Homepage.routeName: (_) => Homepage(),
